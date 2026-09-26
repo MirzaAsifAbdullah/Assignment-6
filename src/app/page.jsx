@@ -50,9 +50,8 @@ export default async function Home() {
           </h1>
 
           <p className="mt-5 max-w-[450px] text-[11px] leading-5 text-[#858992]">
-            Build better training habits with structured workouts,
-            detailed instructions, and a simple way to track your daily
-            plan.
+          FitLog is a dark, no-nonsense gym companion: pick a lift, lock it <br />
+into  today's plan, and watch the week's work add up.
           </p>
 
           <a
@@ -85,13 +84,11 @@ export default async function Home() {
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-6 flex items-end justify-between">
             <div>
-              <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-[#ccff00]">
-                Explore
-              </p>
-
               <h2 className="font-oswald mt-1 text-[28px] font-bold uppercase sm:text-[32px]">
-                Workout Library
+              THE LIBRARY
               </h2>
+
+              <p className="text-gray-600">Twelve lifts covering every major muscle group.</p>
             </div>
 
             <p className="hidden text-[9px] text-[#686c74] sm:block">
