@@ -33,47 +33,50 @@ export default async function Home() {
     <main className="min-h-screen bg-[#0b0c0f] text-white">
       <Navbar />
 
-      <section className="px-5 pb-8 pt-7 sm:px-6 md:px-8 md:pt-9">
-        <div className="mx-auto max-w-[1280px]">
-          <div className="overflow-hidden rounded-[8px] border border-[#202329] bg-[#101216]">
-            <div className="grid items-center lg:grid-cols-[1fr_0.9fr]">
-              <div className="px-6 py-9 sm:px-8 md:px-10 md:py-12">
-                <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-[#ccff00]">
-                  Workout Library
-                </p>
+      
+<section className="px-5 pb-8 pt-7 sm:px-6 md:px-8 md:pt-9">
+  <div className="mx-auto max-w-[1280px]">
+    <div className="overflow-hidden rounded-[8px] border border-[#202329] bg-[#101216]">
+      <div className="grid items-center lg:grid-cols-[1fr_0.9fr]">
+        <div className="px-6 py-9 sm:px-8 md:px-10 md:py-12">
+          <p className="text-[8px] font-bold uppercase tracking-[0.22em] text-[#ccff00]">
+            Workout Library
+          </p>
 
-                <h1 className="font-oswald mt-4 max-w-[550px] text-[42px] font-bold uppercase leading-[0.95] tracking-[-0.02em] sm:text-[52px] md:text-[64px]">
-                  Train with intent.
-                  <br />
-                  Log every set.
-                </h1>
+          <h1 className="font-oswald mt-4  text-[42px] font-bold uppercase leading-[0.95] tracking-[-0.02em] sm:text-[52px] md:text-[64px]">
+            Train with intent.Log 
+            <br />
+            every set.
+          </h1>
 
-                <p className="mt-5 max-w-[450px] text-[11px] leading-5 text-[#858992]">
-                  Build better training habits with structured workouts,
-                  detailed instructions, and a simple way to track your daily
-                  plan.
-                </p>
+          <p className="mt-5 max-w-[450px] text-[11px] leading-5 text-[#858992]">
+            Build better training habits with structured workouts,
+            detailed instructions, and a simple way to track your daily
+            plan.
+          </p>
 
-                <a
-                  href="#library"
-                  className="mt-7 inline-flex rounded-[5px] bg-[#ccff00] px-5 py-3 text-[9px] font-bold uppercase tracking-[0.08em] text-black transition hover:bg-[#d8ff3d]"
-                >
-                  Browse Workouts
-                </a>
-              </div>
-
-              <div className="h-full min-h-[260px] border-t border-[#202329] lg:border-l lg:border-t-0">
-                <Image
-                  src={banner}
-                  alt="FitLog workout banner"
-                  className="h-full min-h-[260px] w-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
+          <a
+            href="#library"
+            className="mt-7 inline-flex rounded-[5px] bg-[#ccff00] px-5 py-3 text-[9px] font-bold uppercase tracking-[0.08em] text-black transition hover:bg-[#d8ff3d]"
+          >
+            Browse Workouts
+          </a>
         </div>
-      </section>
+
+        <div className="h-full ">
+          <Image
+            src={banner}
+            alt="FitLog workout banner"
+            className="h-full w-full object-cover"
+            priority
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <section
         id="library"
