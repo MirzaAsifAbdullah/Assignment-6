@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+Project Name :  FitLog — Workout
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Short Description:
+FitLog is a responsive workout library web application that helps users discover workouts, view detailed exercise instructions, build a personal workout plan, and save their favorite workouts for easy access.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Technologies Used:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1)Next.js,
+2)React,
+3)JavaScript,
+4)Tailwind CSS,
+5)Next.js Image Optimization,
+6)React Context API,
+7)Responsive Web Design.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Key Features:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1)Workout Library:
+Browse a collection of workouts with useful information such as workout type, difficulty, duration, and targeted muscle groups.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2)Workout Details:
+View detailed information and instructions for individual workouts to understand how each exercise should be performed.
 
-## Deploy on Vercel
+3)Personal Workout Plan:
+Add workouts to your personal plan and manage your selected workouts in one place.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4)Save Favorite Workouts:
+Save workouts for quick access later and easily manage your saved workout collection.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5)Responsive Design:
+Fully responsive interface that works smoothly across desktop, tablet, and mobile devices.
