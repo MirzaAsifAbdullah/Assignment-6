@@ -5,7 +5,7 @@ export default function Loading() {
         <div className="h-8 w-8 animate-spin rounded-full border-2 border-[#292d32] border-t-[#ccff00]" />
 
         <p className="text-[9px] uppercase tracking-[0.2em] text-[#7d818a]">
-          Loading workouts...
+          
         </p>
       </div>
     </main>
