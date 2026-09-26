@@ -41,9 +41,7 @@ export default function WorkoutCard({ workout }) {
             </p>
 
             <p className="mt-1 text-[9px] font-medium text-[#b8bbc1]">
-              {workout.duration
-                ? `${workout.duration} min`
-                : "-"}
+              {workout.duration ? `${workout.duration} min` : "-"}
             </p>
           </div>
 
@@ -53,9 +51,7 @@ export default function WorkoutCard({ workout }) {
             </p>
 
             <p className="mt-1 text-[9px] font-medium text-[#b8bbc1]">
-              {workout.caloriesBurned
-                ? `${workout.caloriesBurned} kcal`
-                : "-"}
+              {workout.caloriesBurned ? `${workout.caloriesBurned} kcal` : "-"}
             </p>
           </div>
 

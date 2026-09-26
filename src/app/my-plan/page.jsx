@@ -8,20 +8,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useFitLog } from "@/context/FitLogContext";
 
-
 export default function MyPlan() {
-  const {
-    plan,
-    saved,
-    removeFromPlan,
-    markAsDone,
-    removeSaved,
-  } = useFitLog();
+  const { plan, saved, removeFromPlan, markAsDone, removeSaved } = useFitLog();
 
   const searchParams = useSearchParams();
 
-  const requestedTab =
-    searchParams.get("tab") === "saved" ? "saved" : "plan";
+  const requestedTab = searchParams.get("tab") === "saved" ? "saved" : "plan";
 
   const [activeTab, setActiveTab] = useState(requestedTab);
 
@@ -31,47 +23,31 @@ export default function MyPlan() {
 
   const [sortBy, setSortBy] = useState("duration");
 
-  const completedCount = plan.filter(
-    (item) => item.done
-  ).length;
+  const completedCount = plan.filter((item) => item.done).length;
 
   const totalCalories = plan.reduce(
-    (total, item) =>
-      total + Number(item.caloriesBurned || 0),
-    0
+    (total, item) => total + Number(item.caloriesBurned || 0),
+    0,
   );
 
   const totalDuration = plan.reduce(
-    (total, item) =>
-      total + Number(item.duration || 0),
-    0
+    (total, item) => total + Number(item.duration || 0),
+    0,
   );
 
   const currentItems = useMemo(() => {
-    const items =
-      activeTab === "plan"
-        ? [...plan]
-        : [...saved];
+    const items = activeTab === "plan" ? [...plan] : [...saved];
 
     return items.sort((a, b) => {
       if (sortBy === "calories") {
-        return (
-          Number(b.caloriesBurned || 0) -
-          Number(a.caloriesBurned || 0)
-        );
+        return Number(b.caloriesBurned || 0) - Number(a.caloriesBurned || 0);
       }
 
       if (sortBy === "rating") {
-        return (
-          Number(b.rating || 0) -
-          Number(a.rating || 0)
-        );
+        return Number(b.rating || 0) - Number(a.rating || 0);
       }
 
-      return (
-        Number(a.duration || 0) -
-        Number(b.duration || 0)
-      );
+      return Number(a.duration || 0) - Number(b.duration || 0);
     });
   }, [activeTab, plan, saved, sortBy]);
 
@@ -94,9 +70,7 @@ export default function MyPlan() {
           <div className="mt-6 overflow-hidden rounded-[9px] border border-[#202329] bg-[#15181e]">
             <div className="grid grid-cols-3">
               <div className="border-r border-[#202329] px-5 py-6 sm:px-6">
-                <p className="text-[8px] text-[#777b83]">
-                  Exercises
-                </p>
+                <p className="text-[8px] text-[#777b83]">Exercises</p>
 
                 <p className="font-oswald mt-2 text-[30px] font-bold leading-none text-[#ccff00]">
                   {plan.length}
@@ -104,9 +78,7 @@ export default function MyPlan() {
               </div>
 
               <div className="border-r border-[#202329] px-5 py-6 sm:px-6">
-                <p className="text-[8px] text-[#777b83]">
-                  Minutes
-                </p>
+                <p className="text-[8px] text-[#777b83]">Minutes</p>
 
                 <p className="font-oswald mt-2 text-[30px] font-bold leading-none text-white">
                   {totalDuration}
@@ -114,9 +86,7 @@ export default function MyPlan() {
               </div>
 
               <div className="px-5 py-6 sm:px-6">
-                <p className="text-[8px] text-[#777b83]">
-                  Calories
-                </p>
+                <p className="text-[8px] text-[#777b83]">Calories</p>
 
                 <p className="font-oswald mt-2 text-[30px] font-bold leading-none text-white">
                   {totalCalories}
@@ -157,22 +127,14 @@ export default function MyPlan() {
 
               <select
                 value={sortBy}
-                onChange={(event) =>
-                  setSortBy(event.target.value)
-                }
+                onChange={(event) => setSortBy(event.target.value)}
                 className="h-[30px] rounded-[6px] border border-[#202329] bg-[#15181e] px-3 text-[8px] text-[#c5c7cb] outline-none transition focus:border-[#3d432f]"
               >
-                <option value="duration">
-                  Duration
-                </option>
+                <option value="duration">Duration</option>
 
-                <option value="calories">
-                  Calories
-                </option>
+                <option value="calories">Calories</option>
 
-                <option value="rating">
-                  Rating
-                </option>
+                <option value="rating">Rating</option>
               </select>
             </div>
           </div>
@@ -230,23 +192,17 @@ export default function MyPlan() {
 
                       <div className="mt-2.5 flex flex-wrap items-center gap-3">
                         <span className="flex items-center gap-1.5 text-[9px] text-[#c4c6ca]">
-                          <span className="text-[#ccff00]">
-                            ◷
-                          </span>
+                          <span className="text-[#ccff00]">◷</span>
                           {workout.duration || "-"} min
                         </span>
 
                         <span className="flex items-center gap-1.5 text-[9px] text-[#c4c6ca]">
-                          <span className="text-[#ccff00]">
-                            ♨
-                          </span>
+                          <span className="text-[#ccff00]">♨</span>
                           {workout.caloriesBurned || "-"} kcal
                         </span>
 
                         <span className="flex items-center gap-1.5 text-[9px] text-[#c4c6ca]">
-                          <span className="text-[#ccff00]">
-                            ★
-                          </span>
+                          <span className="text-[#ccff00]">★</span>
                           {workout.rating || "-"}
                         </span>
                       </div>
@@ -262,22 +218,16 @@ export default function MyPlan() {
 
                       {activeTab === "plan" && (
                         <button
-                          onClick={() =>
-                            markAsDone(workout.id)
-                          }
+                          onClick={() => markAsDone(workout.id)}
                           className={`hidden h-[32px] items-center justify-center rounded-full px-4 text-[8px] font-bold transition sm:flex ${
                             workout.done
                               ? "bg-[#263300] text-[#ccff00]"
                               : "bg-[#ccff00] text-black hover:bg-[#d8ff3d]"
                           }`}
                         >
-                          <span className="mr-1.5">
-                            ✓
-                          </span>
+                          <span className="mr-1.5">✓</span>
 
-                          {workout.done
-                            ? "Mark Active"
-                            : "Mark as Done"}
+                          {workout.done ? "Mark Active" : "Mark as Done"}
                         </button>
                       )}
 
@@ -299,12 +249,11 @@ export default function MyPlan() {
             )}
           </div>
 
-          {activeTab === "plan" &&
-            currentItems.length > 0 && (
-              <p className="mt-4 text-center text-[7px] text-[#555961]">
-                {completedCount} of {plan.length} workouts completed
-              </p>
-            )}
+          {activeTab === "plan" && currentItems.length > 0 && (
+            <p className="mt-4 text-center text-[7px] text-[#555961]">
+              {completedCount} of {plan.length} workouts completed
+            </p>
+          )}
         </div>
       </section>
 

@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import logo from "@/assets/logo.png";
 
@@ -20,11 +19,10 @@ export default function Footer() {
           </p>
         </div>
 
-        <p className="text-[9px] leading-4 text-gray-600 sm:text-right">
+        {/* <p className="text-[9px] leading-4 text-gray-600 sm:text-right">
           © 2026 FitLog — Workout Library. Train hard, log honest.
-        </p>
+        </p> */}
       </div>
     </footer>
   );
 }
-

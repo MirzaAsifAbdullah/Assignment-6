@@ -3,12 +3,7 @@
 import { useFitLog } from "@/context/FitLogContext";
 
 export default function WorkoutDetails({ workout }) {
-  const {
-    addToPlan,
-    saveWorkout,
-    isInPlan,
-    isSaved,
-  } = useFitLog();
+  const { addToPlan, saveWorkout, isInPlan, isSaved } = useFitLog();
 
   const planAdded = isInPlan(workout.id);
   const saved = isSaved(workout.id);
@@ -92,9 +87,7 @@ export default function WorkoutDetails({ workout }) {
                 </span>
 
                 <span className="text-[9px] text-[#f1f1f2]">
-                  {workout.duration
-                    ? `${workout.duration} min`
-                    : "-"}
+                  {workout.duration ? `${workout.duration} min` : "-"}
                 </span>
               </div>
 
@@ -116,9 +109,7 @@ export default function WorkoutDetails({ workout }) {
                 </span>
 
                 <span className="text-[9px] font-semibold text-[#ccff00]">
-                  {workout.rating
-                    ? `★ ${workout.rating}`
-                    : "-"}
+                  {workout.rating ? `★ ${workout.rating}` : "-"}
                 </span>
               </div>
             </div>
@@ -129,22 +120,17 @@ export default function WorkoutDetails({ workout }) {
               </h2>
 
               <div className="mt-3 space-y-3">
-                {workout.instructions?.map(
-                  (instruction, index) => (
-                    <div
-                      key={index}
-                      className="flex gap-3"
-                    >
-                      <span className="shrink-0 text-[9px] font-medium text-[#9da0a7]">
-                        {index + 1}.
-                      </span>
+                {workout.instructions?.map((instruction, index) => (
+                  <div key={index} className="flex gap-3">
+                    <span className="shrink-0 text-[9px] font-medium text-[#9da0a7]">
+                      {index + 1}.
+                    </span>
 
-                      <p className="text-[9px] leading-[1.65] text-[#a0a3aa]">
-                        {instruction}
-                      </p>
-                    </div>
-                  )
-                )}
+                    <p className="text-[9px] leading-[1.65] text-[#a0a3aa]">
+                      {instruction}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -162,9 +148,7 @@ export default function WorkoutDetails({ workout }) {
                   {planAdded ? "✓" : "▣"}
                 </span>
 
-                {planAdded
-                  ? "Added to today's plan"
-                  : "Add to today's plan"}
+                {planAdded ? "Added to today's plan" : "Add to today's plan"}
               </button>
 
               <button
@@ -176,13 +160,9 @@ export default function WorkoutDetails({ workout }) {
                     : "border-[#363940] text-[#d0d2d6] hover:border-[#ccff00] hover:text-[#ccff00]"
                 }`}
               >
-                <span className="mr-2 text-[10px]">
-                  {saved ? "✓" : "▢"}
-                </span>
+                <span className="mr-2 text-[10px]">{saved ? "✓" : "▢"}</span>
 
-                {saved
-                  ? "Saved for later"
-                  : "Save for later"}
+                {saved ? "Saved for later" : "Save for later"}
               </button>
             </div>
           </div>

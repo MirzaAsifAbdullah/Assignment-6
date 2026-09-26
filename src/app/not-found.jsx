@@ -8,9 +8,7 @@ export default function NotFound() {
           FitLog
         </p>
 
-        <h1 className="font-oswald mt-3 text-7xl font-bold uppercase">
-          404
-        </h1>
+        <h1 className="font-oswald mt-3 text-7xl font-bold uppercase">404</h1>
 
         <p className="mt-3 text-[11px] text-[#858992]">
           The workout you're looking for doesn't exist.
